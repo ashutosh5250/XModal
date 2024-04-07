@@ -49,53 +49,55 @@ function App() {
       <div className="open_form">
         <button onClick={openModal}>Open Form</button>
       </div>
-      <div className={`modal ${showModal ? "show" : ""}`} onClick={closeModal}>
-        <div className="modal-content" onClick={stopPropagation}>
-          <span onClick={closeModal}></span>
-          <h2>Fill Details</h2>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
-            <input
-              name="username"
-              id="username"
-              type="name"
-              required
-              onChange={handleChange}
-              value={data.username}
-            ></input>
-            <label htmlFor="email">Email Address:</label>
-            <input
-              name="email"
-              id="email"
-              type="email"
-              required
-              onChange={handleChange}
-              value={data.email}
-            ></input>
-            <label htmlFor="phone">Phone Number:</label>
-            <input
-              name="phone"
-              id="phone"
-              type="number"
-              required
-              onChange={handleChange}
-              value={data.phone}
-            ></input>
-            <label htmlFor="dob">Date of Birth:</label>
-            <input
-              name="dob"
-              id="dob"
-              type="date"
-              required
-              onChange={handleChange}
-              value={data.dob}
-            ></input>
-            <button type="submit" className="submit-button">
-              Submit
-            </button>
-          </form>
+      {showModal && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={stopPropagation}>
+            <span onClick={closeModal}></span>
+            <h2>Fill Details</h2>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="username">Username:</label>
+              <input
+                name="username"
+                id="username"
+                type="name"
+                required
+                onChange={handleChange}
+                value={data.username}
+              ></input>
+              <label htmlFor="email">Email Address:</label>
+              <input
+                name="email"
+                id="email"
+                type="email"
+                required
+                onChange={handleChange}
+                value={data.email}
+              ></input>
+              <label htmlFor="phone">Phone Number:</label>
+              <input
+                name="phone"
+                id="phone"
+                type="number"
+                required
+                onChange={handleChange}
+                value={data.phone}
+              ></input>
+              <label htmlFor="dob">Date of Birth:</label>
+              <input
+                name="dob"
+                id="dob"
+                type="date"
+                required
+                onChange={handleChange}
+                value={data.dob}
+              ></input>
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
