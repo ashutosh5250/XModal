@@ -63,7 +63,7 @@ form input {
     display: flex;
     justify-content: center;
   }
-.submit{
-    display: flex;
-    justify-content: center;
+.submit-button{
+    position: relative;
+    left:45%;
 }

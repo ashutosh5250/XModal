@@ -90,9 +90,9 @@ function App() {
               onChange={handleChange}
               value={data.dob}
             ></input>
-            <div className="submit">
-              <button type="submit">Submit</button>
-            </div>
+            <button type="submit" className="submit-button">
+              Submit
+            </button>
           </form>
         </div>
       </div>
